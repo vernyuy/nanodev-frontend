@@ -18,7 +18,7 @@ const page = () => {
     const getTransactionDetails = async () => {
         const id = params.id;
         try {
-            const res = await axios.get(`http://localhost:8282/api/transaction/${id}`)
+            const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL!}/api/transaction/${id}`)
             setT(res.data)
         } catch (err) {
             console.log(err)

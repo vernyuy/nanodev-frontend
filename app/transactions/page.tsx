@@ -9,7 +9,7 @@ import moment from 'moment'
 import Link from 'next/link'
 import Footer from '../components/Footer'
 
-const socket = io('http://localhost:8282/', {
+const socket = io(process.env.NEXT_PUBLIC_API_URL!, {
   reconnection: true
 })
 const page = () => {
